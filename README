@@ -1,0 +1,33 @@
+I completed "problem (a)" as my primary assignment, "problem (b)" was completed for the extra credit.
+
+TO COMPILE:
+1) Run "make"
+2) Run "make jar"
+
+TO USE:
+Command syntax: hadoop jar [Jar_Name].jar project1.Main [input_file] [keyword] {-o [output_path]}
+ 
+This program takes two manditory parameters: [input_file], [keyword]. One optional parameter, -o [output_path]; if not supplied
+ the default values is your home hadoop directory.
+
+Once submitted the application will prompt you for which program you would like to run. ArticleCounter (1) is "problem (a)" from the 
+assignement description, FiveMostCommonCounter (2) is "problem (b)". Once selected, you will press enter and the program will begin 
+execution.
+
+ArticleCounter output:
+The output contains each article ID and the number 1 where a match was found. At the end of the output there is a total value which
+indicates the total number of articles which contain the keyword, [keyword].
+
+FiveMostCommonCounter output:
+The output contains the number of occurance of each word in every article with a title that contains the keyword, [keyword]. At 
+the end of the output, the five most common words are returned with the number of occurances. 
+
+TESTING:
+When searching for the keyword "the", ArticleCounter should output a file whose last line is "Total Count	3416699"
+
+When searching for the keyword "Hello World", FiveMostCommonCounter should output a file whose last 5 lines are 
+"1st paragraph	14
+2nd param	13
+3rd heading	12
+4th n	11
+5th name	11"
